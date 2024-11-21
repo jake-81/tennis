@@ -40,6 +40,7 @@
             padding: 10px 0;
         }
         .video-button {
+            height: 150px;
             background-color: #e6f2ff;
             border: none;
             padding: 0;
@@ -53,33 +54,24 @@
             flex-direction: column;
             overflow: hidden;
             position: relative;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
         .video-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 15px rgba(30, 144, 255, 0.2);
         }
-        .video-button img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-        .video-button:hover img {
-            transform: scale(1.1);
-        }
         .content {
             padding: 15px;
             background: rgba(255, 255, 255, 0.9);
             z-index: 1;
+            margin-top: auto;
         }
         .title {
             font-size: 1.1em;
             font-weight: bold;
             margin-bottom: 5px;
-        }
-        .description {
-            font-size: 0.9em;
-            color: #666;
         }
         .overlay {
             position: absolute;
@@ -93,6 +85,32 @@
         .video-button:hover .overlay {
             background: rgba(0, 0, 0, 0.1);
         }
+
+        /* 이미지 배경 */
+        .forehand-stroke {
+            background-image: url('./images/forehand-stroke.png');
+        }
+        .backhand-stroke {
+            background-image: url('./images/backhand-stroke.png');
+        }
+        .basic-serve {
+            background-image: url('./images/basic-serve.png');
+        }
+        .slice-serve {
+            background-image: url('./images/slice-serve.png');
+        }
+        .forehand-volley {
+            background-image: url('./images/forehand-volley.png');
+        }
+        .backhand-volley {
+            background-image: url('./images/backhand-volley.png');
+        }
+        .lob-shot {
+            background-image: url('./images/lob-shot.png');
+        }
+        .smash {
+            background-image: url('./images/smash.png');
+        }
     </style>
 </head>
 <body>
@@ -104,16 +122,14 @@
         <h2>기본 스트로크</h2>
         <div class="button-container">
             <a href="https://www.youtube.com/results?search_query=테니스+포핸드+기초" 
-               class="video-button" target="_blank">
-                <img src="./포핸드 스트로크.png" alt="포핸드 스트로크"/>
+               class="video-button forehand-stroke" target="_blank">
                 <div class="overlay"></div>
                 <div class="content">
                     <div class="title">포핸드 스트로크</div>
                 </div>
             </a>
             <a href="https://www.youtube.com/results?search_query=테니스+백핸드+기초" 
-               class="video-button" target="_blank">
-                <img src="./백핸드 스트로크.png" alt="백핸드 스트로크"/>
+               class="video-button backhand-stroke" target="_blank">
                 <div class="overlay"></div>
                 <div class="content">
                     <div class="title">백핸드 스트로크</div>
@@ -126,16 +142,14 @@
         <h2>서브</h2>
         <div class="button-container">
             <a href="https://www.youtube.com/results?search_query=테니스+서브+기초" 
-               class="video-button" target="_blank">
-                <img src="./기본 서브.png" alt="기본 서브"/>
+               class="video-button basic-serve" target="_blank">
                 <div class="overlay"></div>
                 <div class="content">
                     <div class="title">기본 서브</div>
                 </div>
             </a>
             <a href="https://www.youtube.com/results?search_query=테니스+슬라이스+서브+강좌" 
-               class="video-button" target="_blank">
-                <img src="./슬라이스 서브.png" alt="슬라이스 서브"/>
+               class="video-button slice-serve" target="_blank">
                 <div class="overlay"></div>
                 <div class="content">
                     <div class="title">슬라이스 서브</div>
@@ -148,16 +162,14 @@
         <h2>발리</h2>
         <div class="button-container">
             <a href="https://www.youtube.com/results?search_query=테니스+포핸드+발리+레슨" 
-               class="video-button" target="_blank">
-                <img src="./포핸드 발리.png" alt="포핸드 발리"/>
+               class="video-button forehand-volley" target="_blank">
                 <div class="overlay"></div>
                 <div class="content">
                     <div class="title">포핸드 발리</div>
                 </div>
             </a>
             <a href="https://www.youtube.com/results?search_query=테니스+백핸드+발리+레슨" 
-               class="video-button" target="_blank">
-                <img src="./백핸드 발리.png" alt="백핸드 발리"/>
+               class="video-button backhand-volley" target="_blank">
                 <div class="overlay"></div>
                 <div class="content">
                     <div class="title">백핸드 발리</div>
@@ -170,16 +182,14 @@
         <h2>특수 샷</h2>
         <div class="button-container">
             <a href="https://www.youtube.com/results?search_query=테니스+로브+샷+레슨" 
-               class="video-button" target="_blank">
-                <img src="./로브 샷.png" alt="로브 샷"/>
+               class="video-button lob-shot" target="_blank">
                 <div class="overlay"></div>
                 <div class="content">
                     <div class="title">로브 샷</div>
                 </div>
             </a>
             <a href="https://www.youtube.com/results?search_query=테니스+스매시+레슨" 
-               class="video-button" target="_blank">
-                <img src="./스매시.png" alt="스매시"/>
+               class="video-button smash" target="_blank">
                 <div class="overlay"></div>
                 <div class="content">
                     <div class="title">스매시</div>
